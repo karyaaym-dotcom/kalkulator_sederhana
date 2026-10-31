@@ -73,4 +73,43 @@
 </html>
 </html>
   </script>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+  <h2>Kalkulator Penjumlahan</h2>
+
+  <!-- Kotak input angka pertama -->
+  <input type="number" id="angka1" placeholder="Angka pertama">
+  
+  <span>+</span>
+
+  <!-- Kotak input angka kedua -->
+  <input type="number" id="angka2" placeholder="Angka kedua">
+
+  <!-- Tombol untuk menghitung -->
+  <button onclick="tambah()">Hitung</button>
+
+  <!-- Tempat menampilkan hasil -->
+  <h3>Hasil: <span id="hasil">0</span></h3>
+
+  <script>
+    function tambah() {
+      // Mengambil nilai dari input dan mengubahnya menjadi angka
+      let a = Number(document.getElementById("angka1").value);
+      let b = Number(document.getElementById("angka2").value);
+
+      // Menjumlahkan kedua angka
+      let hasil = a + b;
+
+      // Menampilkan hasil ke layar
+      document.getElementById("hasil").innerHTML = hasil;
+    }
+  </script>
+
+</body>
 </html>
