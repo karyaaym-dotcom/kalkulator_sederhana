@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <button type = "button" onclick="sayHello()">Click</button>
+    <form>
+      <label>Fahrenheit</label><br>
+      <input type="number" id="f" placeholder="enter the temperature"><br>
+      <button type="button" onclick="toCelicius()">Konversi</button><br>
+      <label>Celcius</label>>
+      <h1 id="suhuKonversi">0</h1>
+    </form>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  <script>
+    function sayHello(){
+      return alert("Hello world");
+    }
+
+    function toCelicius(){
+      let suhuFahrenheit = document.getElementById("f").value;
+      let konversi = (5/9) * (suhuFahrenheit-32);
+      return document.getElementById("suhuKonversi").innerHTML= konversi.toFixed(2);
+    }
+
+    </script>
+
+</body>
+</html>
+
+<head>
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+  <h2>Kalkulator Penjumlahan</h2>
+
+  <!-- Kotak input angka pertama -->
+  <input type="number" id="angka1" placeholder="Angka pertama">
+  
+  <span>+</span>
+
+  <!-- Kotak input angka kedua -->
+  <input type="number" id="angka2" placeholder="Angka kedua">
+
+  <!-- Tombol untuk menghitung -->
+  <button onclick="tambah()">Hitung</button>
+
+  <!-- Tempat menampilkan hasil -->
+  <h3>Hasil: <span id="hasil">0</span></h3>
+
+  <script>
+    function tambah() {
+      // Mengambil nilai dari input dan mengubahnya menjadi angka
+      let a = Number(document.getElementById("angka1").value);
+      let b = Number(document.getElementById("angka2").value);
+
+      // Menjumlahkan kedua angka
+      let hasil = a + b;
+
+      // Menampilkan hasil ke layar
+      document.getElementById("hasil").innerHTML = hasil;
+    }
+  </script>
+
+</body>
+</html>
+</html>
+  </script>
+</html>
